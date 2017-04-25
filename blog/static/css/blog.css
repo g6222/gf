@@ -1,0 +1,31 @@
+<style>
+table.one
+{
+    table-layout: automatic
+}
+body {
+        padding-left: 15px;
+    }
+h1 {
+    font-size: 300%
+
+}
+h2 {
+    font-size: 100%
+}
+h3{
+    border:3px solid #494949;
+    padding:10px 900px;
+    background: #494949;
+    width:60px;
+    border-radius:10px;
+}
+div
+{
+    border:2px solid #8968fc;
+    padding:6px 10px;
+    background: #8968fc;
+    width:60px;
+    border-radius:10px;
+}
+</style>
