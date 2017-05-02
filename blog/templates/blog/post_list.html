@@ -1,20 +1,39 @@
-    {% load staticfiles %}
-    <html>
-        <head>
-            <title>没钱赚商店</title>
-            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        </head>
-        <body>
-<h3>
-Let'sGO
-</h3>
-</table>
-        <h1>Welcome to Let's Go!</h1>
-        <h2>      商店里进行购物结算时会使用收音机(POS) 系统，这台收银机会在结算时根据客户的购物
-      车(Car) 中的商品 (Item) 和商店正在进行的优惠活动(Promotion) 进行结算和打印购物清单。
-            一直盖上点正在对部分商品进行“买二赠一”的优惠活动。我们需要实现一个名为pri
-      ntlnventory函数，该函数能够将指定格式的数据作为参数输入，然后在浏览器的控制台中
-      输出结算清单的文本。</h2>
-        <div><a href="#">Let's Go</a></div>
-    </body>
-    </html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>没钱赚商店</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+    <div class="frame">
+        <div class="go">
+            Let's Go
+        </div>
+        <div class="button">
+            <a href="#" class="button">主页</a>
+        </div>
+        <div class="list">
+            商品列表
+        </div>
+        <div class="cart">
+            <img class="icon" src="http://www.msqq.com/d/file/icon/2014-11-21/0f84db36315717762ed353eb3defaa7b.png"
+            onerror="alert('错误')"/>
+            购物车(0)
+        </div>
+        </div>
+<div class="b">
+    <h1>
+        Welcome to Let's Go!
+    </h1>
+    <p>
+        商店里进行购物结算时会使用收银(POS)  系统，这台收银机会在结算时根据客户的购物车
+    (Car) 中的商品 (Item) 和商店正在进行的优惠活动(Promotion) 进行结算和打印购物
+      清单。已知该商品店正在对部分商品进行“买二赠一”的优惠活动。我们需要实现一个名为pri
+      ntlnventory函数，该函数能够将指定格式的数据作为参数 输入，然后在浏览器的控制台中输出结算清单的文本。
+    </p>
+    <div class="e">
+        Let's Go
+    </div>
+    </div>
+</body>
+</html>

@@ -1,31 +1,75 @@
-<style>
-table.one
-{
-    table-layout: automatic
+body{
+    margin: 0px;
 }
-body {
-        padding-left: 15px;
-    }
-h1 {
-    font-size: 300%
-
+.frame {
+    background-color: #373737;
+    width: auto;
+    height: 80px;
+    margin: auto;
 }
-h2 {
-    font-size: 100%
+.go {
+    background-color: #373737;
+    color: #bebdc1;
+    width: 200px;
+    float: left;
+    line-height: 80px;
+    font-size:18px;
+    text-align: right;
+    margin: 0px 10px 0px 0px;
 }
-h3{
-    border:3px solid #494949;
-    padding:10px 900px;
-    background: #494949;
-    width:60px;
+.button {
+    background-color: black;
+    color: white;
+    width: 80px;
+    float: left;
+    line-height: 80px;
+    font-size:18px;
+    text-align: center;
+    text-decoration:blink;
+}
+.list {
+    background-color: #373737;
+    color: #bebdc1;
+    float: left;
+    line-height: 80px;
+    font-size:18px;
+    padding: 0px 10px;
+}
+.cart {
+    background-color: #373737;
+    margin: 0px 150px;
+    color: #bebdc1;
+    float: right;
+    line-height: 80px;
+    font-size:18px;
+}
+img.icon {
+    height: 25px;
+    float: left;
+    margin: 26px 0px;
+}
+.b {
+    background-color: #eae9ed;
+    padding: 50px 20px;
+    margin: 20px 150px;
+}
+h1{
+    font-size:80px;
+}
+p{
+font-size:37px;
+}
+.e {
+    background-color: #5e6ac0;
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    font-size:18px;
+    text-align: center;
     border-radius:10px;
+    color: white;
+    display:block;
 }
-div
-{
-    border:2px solid #8968fc;
-    padding:6px 10px;
-    background: #8968fc;
-    width:60px;
-    border-radius:10px;
+.list:hover, .cart:hover, .gff:hover {
+    background-color: black;
 }
-</style>
