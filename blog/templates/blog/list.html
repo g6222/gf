@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>没钱赚商店</title>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    {% block css %}
+    {% endblock %}
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+</head>
+<body>
+<div class="frame">
+    <div class="navigationbar page">Let's Go</div>
+    <div class="navigationbar active" onclick="home()">主页</div>
+    <div class="navigationbar" onclick="shoppingList()">商品列表</div>
+    <div class="navigationbar cartPosition" onclick="cart()">
+        <img class="icon" src="{% static '购物车.png'%}">购物车(0)</div>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>

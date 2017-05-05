@@ -1,0 +1,45 @@
+.list{
+    background-color: white;
+    margin: 30px 150px;
+    height:500px;
+    border-style: solid;
+    border-color: #bebdc1;
+    border-width: 1px;
+}
+.pp{
+    background-color: rgba(128, 109, 109, 0.2);
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    border:1px solid rgba(128, 109, 109, 0.2);
+}
+table,th,td
+  {
+    border:1px solid rgba(128, 109, 109, 0.2);
+    color: rgba(29, 27, 34, 0.8);
+    text-align: center;
+    width: 1570px;
+  }
+table
+  {
+    border-collapse: collapse;
+    margin: 20px 20px;
+  }
+th{
+    height: 35px;
+}
+td
+  {
+  height:50px;
+  }
+.shopCartButton {
+    background-color: #4e52ff;
+    width: 120px;
+    font-size:18px;
+    border-radius:5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
