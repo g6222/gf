@@ -19,7 +19,7 @@ table,th,td
     border:1px solid rgba(128, 109, 109, 0.2);
     color: rgba(29, 27, 34, 0.8);
     text-align: center;
-    width: 1570px;
+    width: 90%;
   }
 table
   {
@@ -31,7 +31,7 @@ th{
 }
 td
   {
-  height:50px;
+    height:50px;
   }
 .shopCartButton {
     background-color: #4e52ff;
@@ -42,4 +42,12 @@ td
     font-weight: bold;
     cursor: pointer;
     text-align: center;
+}
+.active{
+    color: #bebdc1;
+    background-color: #373737;
+}
+.active1{
+    color: white;
+    background-color: black;
 }

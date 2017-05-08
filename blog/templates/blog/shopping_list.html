@@ -17,47 +17,14 @@
     <th> </th>
 </tr>
 <tr>
-    <td>饮料</td>
-    <td>可口可乐</td>
-    <td>3</td>
-    <td>瓶</td>
-    <td><div class="shopCartButton ">加入购物车</div></td>
+    {% for goods in goods %}
+    <td>{{ goods.type }}</td>
+    <td>{{ goods.name }}</td>
+    <td>{{ goods.price }}</td>
+    <td>{{ goods.unit }}</td>
+    <th> </th>
 </tr>
-<tr>
-    <td>饮料</td>
-    <td>雪碧</td>
-    <td>3</td>
-    <td>瓶</td>
-    <td><div class="shopCartButton">加入购物车</div></td>
-</tr>
-<tr>
-    <td>水果</td>
-    <td>苹果</td>
-    <td>5.5</td>
-    <td>斤</td>
-    <td><div class="shopCartButton">加入购物车</div></td>
- </tr>
- <tr>
-    <td>水果</td>
-    <td>荔枝</td>
-    <td>15</td>
-    <td>斤</td>
-    <td><div class="shopCartButton">加入购物车</div></td>
- </tr>
- <tr>
-    <td>生活用品</td>
-    <td>电池</td>
-    <td>2</td>
-    <td>个</td>
-    <td><div class="shopCartButton">加入购物车</div></td>
- </tr>
- <tr>
-    <td>食品</td>
-    <td>方便面</td>
-    <td>4.5</td>
-    <td>袋</td>
-    <td><div class="shopCartButton">加入购物车</div></td>
-</tr>
+    {% endfor %}
 </table>
 </div>
     {% endblock content %}

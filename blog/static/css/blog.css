@@ -27,6 +27,10 @@ body{
     color: white;
     background-color: black;
 }
+.active1{
+    color: #bebdc1;
+    background-color: #373737;
+}
 .cartPosition{
     margin: 0 120px 0 0;
     width: 100px;
