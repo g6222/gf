@@ -5,16 +5,16 @@
 {% endblock %}
 {% block content %}
 <div class="list">
-<div class="pp">
+<div class="mark">
 商品列表
 </div>
-<table>
+<table align="center">
 <tr>
-    <th>分类</th>
-    <th>名称</th>
-    <th>单价(元)</th>
-    <th>单位</th>
-    <th> </th>
+    <th width="20%">分类</th>
+    <th width="20%">名称</th>
+    <th width="20%">单价(元)</th>
+    <th width="10%">单位</th>
+    <th width="30%"> </th>
 </tr>
 <tr>
     {% for goods in goods %}
@@ -22,7 +22,7 @@
     <td>{{ goods.name }}</td>
     <td>{{ goods.price }}</td>
     <td>{{ goods.unit }}</td>
-    <th> </th>
+    <td><button class="shopCartButton">加入购物车</button></td>
 </tr>
     {% endfor %}
 </table>
