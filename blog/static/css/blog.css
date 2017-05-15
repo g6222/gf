@@ -27,13 +27,14 @@ body{
     color: white;
     background-color: black;
 }
-.active1{
-    color: #bebdc1;
-    background-color: #373737;
+
+.highlight{
+    color: white;
+    background-color: black;
 }
 .cartPosition{
     margin: 0 120px 0 0;
-    width: 150px;
+    width: 120px;
     float: right;
     padding: 0 10px;
 }

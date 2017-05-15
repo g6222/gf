@@ -21,7 +21,9 @@ def shopping_list(request):
                                     price=allid[0].price,
                                     unit=allid[0].unit,
                                     count=1)
-        print(Purchase.total())
         return HttpResponse(Purchase.total())
     return render(request, 'blog/shopping_list.html', {'goods': goods,'total_count' : Purchase.total()})
+def shop_cart(request):
+    purchase = Purchase.objects.all()
 
+    return render(request, 'blog/shop_cart.html', {'purchase':purchase})

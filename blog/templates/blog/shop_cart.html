@@ -1,0 +1,30 @@
+{% extends 'blog/list.html' %}
+{% load staticfiles %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/shop_cart.css' %}">
+{% endblock %}
+{%  block cart  %}active{% endblock %}
+{% block content %}
+<div class="list">
+    <div class="mark">购物清单</div>
+        <table>
+            <tr>
+                <th width="10%">分类</th>
+                <th width="15%">名称</th>
+                <th width="15%">单价(元)</th>
+                <th width="10%">单位</th>
+                <th width="25%">数量</th>
+                <th width="25%">小计</th>
+            </tr>
+            <tr>
+                {% for purchase in purchase %}
+                    <td>{{ purchase.type }}</td>
+                    <td>{{ purchase.name }}</td>
+                    <td>{{ purchase.price }}</td>
+                    <td>{{ purchase.unit }}</td>
+                    <td><button class="case">+</button>{{ purchase.count }}</td>
+            </tr>
+                {% endfor %}
+        </table>
+</div>
+    {% endblock content %}

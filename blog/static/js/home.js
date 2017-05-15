@@ -5,5 +5,5 @@ function shoppingList(){
     location.href = '/shopping_list';
 }
 function cart() {
-    location.href = "#"
+    location.href = '/shop_cart';
 }

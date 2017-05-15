@@ -10,10 +10,10 @@
 <body>
 <div class="frame">
     <div class="navigationbar page">Let's Go</div>
-    <div class="navigationbar active" onclick="home()">主页</div>
-    <div class="navigationbar active1" onclick="shoppingList()">商品列表</div>
-    <div class="navigationbar cartPosition" onclick="cart()"><img class="icon" src="{% static '购物车.png' %}">
-        购物车(<number>{{total_count}}</number>)</div>
+    <div class="navigationbar {%  block home_nav  %}{% endblock %}" onclick="home()">主页</div>
+    <div class="navigationbar {%  block shopping_list  %}{% endblock %}" onclick="shoppingList()">商品列表</div>
+    <div class="navigationbar cartPosition {%  block cart  %}{% endblock %}" onclick="cart()">
+        <img class="icon" src="{% static '购物车.png' %}">购物车(<number>{{total_count}}</number>)</div>
 </div>
 {% block content %}
 {% endblock %}

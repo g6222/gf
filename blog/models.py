@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-
 class Goods(models.Model):
     type = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
