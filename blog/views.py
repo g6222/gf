@@ -5,7 +5,7 @@ from django.http import HttpResponse
 # Create your views here.
 def post_list(request):
 
-    return render(request, 'blog/post_list.html', {})
+    return render(request, 'blog/post_list.html', {'total_count':Purchase.total()})
 def shopping_list(request):
     goods = Goods.objects.all()
     if request.method == "POST":
@@ -26,4 +26,4 @@ def shopping_list(request):
 def shop_cart(request):
     purchase = Purchase.objects.all()
 
-    return render(request, 'blog/shop_cart.html', {'purchase':purchase})
+    return render(request, 'blog/shop_cart.html', {'total_count' : Purchase.total(),'purchase':purchase})
