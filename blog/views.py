@@ -25,5 +25,9 @@ def shopping_list(request):
     return render(request, 'blog/shopping_list.html', {'goods': goods,'total_count' : Purchase.total()})
 def shop_cart(request):
     purchase = Purchase.objects.all()
-
+    if request.method =="POST":
+        counts = Purchase.objects.filter(goods_id=(request.POST['id']))
+        if counts:
+            counts[0].count = counts[0].count+1
+            counts[0].save()
     return render(request, 'blog/shop_cart.html', {'total_count' : Purchase.total(),'purchase':purchase})

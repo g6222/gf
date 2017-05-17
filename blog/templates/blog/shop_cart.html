@@ -2,6 +2,9 @@
 {% load staticfiles %}
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/shop_cart.css' %}">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="{% static 'js/shop_cart.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 {% endblock %}
 {%  block cart  %}active{% endblock %}
 {% block content %}
@@ -22,11 +25,11 @@
                     <td>{{ purchase.name }}</td>
                     <td>{{ purchase.price }}</td>
                     <td>{{ purchase.unit }}</td>
-                    <td><button class="reduce">-</button>
-                        <div class="word">{{ purchase.count }}</div>
-                        <button class="plus">+</button></td>
+                    <td><div class="package"><button class="reduce" id="{{ purchase.goods_id }}" >-</button><div class="word">{{ purchase.count }}</div><button class="plus" id="{{ purchase.goods_id }}">+</button></div></td>
             </tr>
                 {% endfor %}
         </table>
+<p>总计:元</p>
+<div class="paymentButton" onclick="payment()">付款</div>
 </div>
     {% endblock content %}

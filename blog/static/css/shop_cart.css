@@ -1,7 +1,7 @@
 .list{
     background-color: white;
     margin: 30px 150px;
-    height:500px;
+    height: 550px;
     border-style: solid;
     border-color: #bebdc1;
     border-width: 1px;
@@ -33,26 +33,51 @@ td
   {
     height:50px;
   }
+.package{
+    border:0px solid;
+    width: 110px;
+    text-align: center;
+    height: 30px;
+    margin: auto;
+}
 .reduce{
     border:1px solid;
     background-color: white;
     width: 33px;
     height: 30px;
-    float: left;
-    margin-left: 140px;
+    font-size: 18px;
 }
 .word{
     border:1px solid;
     background-color: white;
     width: 33px;
-    height: 28px;
-    float: left;
-    line-height: 28px;
+    height: 30px;
+    font-size: 15px;
+    display: inline-block;
+    line-height: 30px;
 }
 .plus{
     border:1px solid;
     background-color: white;
     width: 33px;
     height: 30px;
-    float: left;
+    font-size: 18px;
+}
+.paymentButton{
+    background-color: #5e6ac0;
+    width: 70px;
+    font-size:18px;
+    border-radius:5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    float: right;
+    margin-right: 20px;
+    height: 33px;
+}
+p{
+    font-size: 15px;
+    margin-right: 20px;
+    float: right;
 }
