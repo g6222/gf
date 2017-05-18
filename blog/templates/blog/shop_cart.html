@@ -25,7 +25,11 @@
                     <td>{{ purchase.name }}</td>
                     <td>{{ purchase.price }}</td>
                     <td>{{ purchase.unit }}</td>
-                    <td><div class="package"><button class="reduce" id="{{ purchase.goods_id }}" >-</button><div class="word">{{ purchase.count }}</div><button class="plus" id="{{ purchase.goods_id }}">+</button></div></td>
+                    <td><div class="package"><button class="reduce" id="{{ purchase.goods_id }}" >-</button>
+                        <span id="gf">{{ purchase.count }}</span>
+                        <button class="plus" id="{{ purchase.goods_id }}">+</button>
+                    </div>
+                    </td>
             </tr>
                 {% endfor %}
         </table>

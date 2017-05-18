@@ -34,34 +34,39 @@ td
     height:50px;
   }
 .package{
-    border:0px solid;
-    width: 110px;
+    border:1px solid;
+    width: 100px;
     text-align: center;
     height: 30px;
     margin: auto;
+    border-radius: 5px;
+    border-color: #bebdc1;
 }
 .reduce{
-    border:1px solid;
+    border: none;
+    border-right:1px solid;
     background-color: white;
     width: 33px;
     height: 30px;
     font-size: 18px;
+    float: left;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
-.word{
-    border:1px solid;
-    background-color: white;
-    width: 33px;
+span{
     height: 30px;
-    font-size: 15px;
-    display: inline-block;
     line-height: 30px;
 }
 .plus{
-    border:1px solid;
+    border: none;
+    border-left:1px solid;
     background-color: white;
     width: 33px;
     height: 30px;
     font-size: 18px;
+    float: right;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .paymentButton{
     background-color: #5e6ac0;
