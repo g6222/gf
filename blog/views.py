@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .models import Goods
 from .models import Purchase
 from django.http import HttpResponse
+from django.http import JsonResponse
 # Create your views here.
 def post_list(request):
 
@@ -31,5 +32,11 @@ def shop_cart(request):
         if counts:
             counts[0].count = counts[0].count+int(items)
             counts[0].save()
-        return HttpResponse(counts[0].count)
-    return render(request, 'blog/shop_cart.html', {'total_count' : Purchase.total(),'purchase':purchase})
+            if counts[0].count ==0:
+                counts[0].delete()
+            sub_total = Purchase.objects.filter(goods_id=(request.POST['id']))
+            if sub_total:
+                sub_total[0].subtotal = sub_total[0].price*sub_total[0].count
+                sub_total[0].save()
+        return JsonResponse({'total_count':Purchase.total(),'number':counts[0].count})
+    return render(request, 'blog/shop_cart.html', {'total_count' : Purchase.total(),'purchase':purchase,})

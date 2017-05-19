@@ -14,7 +14,11 @@ $(document).ready(function(){
             data: {quantity:quantity,
                 id:$(this).attr('id')},
             success:function(counts_count) {
-                $('#'+id).next().text(counts_count);
+                if(counts_count.number == 0){
+                    $('#'+id).parents('tr').remove()
+                }
+                $('#'+id).next().text(counts_count.number);
+                $("number").text(counts_count.total_count)
             }
         })
     })
