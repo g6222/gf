@@ -30,11 +30,11 @@
                         <button class="plus" id="{{ purchase.goods_id }}">+</button>
                     </div>
                     </td>
-                    <td>{{ purchase.subtota }}</td>
+                    <td id="subtotals{{ purchase.goods_id }}">{{ purchase.subtotal }}元</td>
             </tr>
                 {% endfor %}
         </table>
-<p>总计:元</p>
+<p>总计:{{ purchase.subtotal }}元</p>
 <div class="paymentButton" onclick="payment()">付款</div>
 </div>
     {% endblock content %}

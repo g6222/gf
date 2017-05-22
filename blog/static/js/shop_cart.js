@@ -19,6 +19,8 @@ $(document).ready(function(){
                 }
                 $('#'+id).next().text(counts_count.number);
                 $("number").text(counts_count.total_count)
+                $('#subtotals'+id).text(counts_count.total)
+                $('p').text(counts_count.totals)
             }
         })
     })
