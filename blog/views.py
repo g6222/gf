@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Goods
 from .models import Purchase
+from .models import Free
 from django.http import HttpResponse
 from django.http import JsonResponse
 # Create your views here.
@@ -25,6 +26,7 @@ def shopping_list(request) :
             items = Purchase.objects.filter(goods_id=(request.POST['id']))
             if items:
                 items[0].subtotal = items[0].price*items[0].count
+                items[0].totals = items[0].subtotal
                 items[0].save()
         return HttpResponse(Purchase.total())
     return render(request, 'blog/shopping_list.html', {'goods': goods,'total_count': Purchase.total()})
@@ -37,11 +39,13 @@ def shop_cart(request):
             counts[0].count = counts[0].count+int(items)
             counts[0].save()
             if sub_total:
-                sub_total[0].totals=0;
-                sub_total[0].subtotal = sub_total[0].price*sub_total[0].count
+                sub_total[0].totals = 0;
+                sub_total[0].subtotal = sub_total[0].price * sub_total[0].count
                 sub_total[0].totals += sub_total[0].subtotal
                 sub_total[0].save()
             if counts[0].count == 0:
                 counts[0].delete()
-            return JsonResponse({'total_count': Purchase.total(),'total': sub_total[0].subtotal,'number': counts[0].count,'totals': sub_total[0].totals})
-    return render(request, 'blog/shop_cart.html', {'total_count': Purchase.total(),'purchase': purchase})
+        totals=Purchase.shop_total()
+        free = Free.objects.filter(doods_id=(request.POST['goods_id']))
+        return JsonResponse({'total_count': Purchase.total(), 'total': sub_total[0].subtotal, 'number': counts[0].count,'totals':totals})
+    return render(request, 'blog/shop_cart.html', {'total_count': Purchase.total(), 'purchase': purchase,'totals':Purchase.shop_total()})

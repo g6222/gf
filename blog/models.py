@@ -18,6 +18,7 @@ class Purchase(models.Model):
     goods_id = models.IntegerField(default=0,null=False)
     count = models.IntegerField(default=0)
     subtotal = models.FloatField(default=0)
+    free_counts = models.IntegerField(default=0)
 
     def total():
         total_count = 0
@@ -25,6 +26,13 @@ class Purchase(models.Model):
         for items in self:
             total_count += items.count
         return total_count
+
+    def shop_total():
+        totals = 0
+        self = Purchase.objects.all()
+        for items in self:
+            totals += items.subtotal
+        return totals
 
 class Free(models.Model):
     goods_id = models.IntegerField(default=0, null=False)
