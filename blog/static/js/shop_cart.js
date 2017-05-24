@@ -19,7 +19,7 @@ $(document).ready(function(){
                 }
                 $('#'+id).next().text(counts_count.number);
                 $("number").text(counts_count.total_count)
-                $('#subtotals'+id).text('原价:'+'('+counts_count.total.toFixed(1)+')'+'元')
+                $('#subtotals'+id).text(counts_count.free+'元'+'(原价:'+counts_count.total.toFixed(1)+'元)')
                 $('p').text('总计:'+counts_count.totals.toFixed(2)+'元')
             }
         })

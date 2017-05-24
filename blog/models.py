@@ -38,3 +38,4 @@ class Free(models.Model):
     goods_id = models.IntegerField(default=0, null=False)
     type = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
+    count = models.IntegerField(default=0)
