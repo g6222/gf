@@ -6,6 +6,7 @@ class Goods(models.Model):
     name = models.CharField(max_length=200)
     price = models.FloatField(default='')
     unit = models.CharField(max_length=200)
+    free = models.IntegerField(default=0)
 
     def __str__(self):
         return self.type
@@ -19,6 +20,7 @@ class Purchase(models.Model):
     count = models.IntegerField(default=0)
     subtotal = models.FloatField(default=0)
     free_counts = models.IntegerField(default=0)
+    free = models.IntegerField(default=0)
 
     def total():
         total_count = 0

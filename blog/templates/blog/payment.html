@@ -1,12 +1,9 @@
 {% extends 'blog/list.html' %}
 {% load staticfiles %}
 {% block css %}
-    <link rel="stylesheet" href="{% static 'css/shop_cart.css' %}">
-    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
-    <script type="text/javascript" src="{% static 'js/shop_cart.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/payment.css' %}">
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
 {% endblock %}
-{%  block cart  %}active{% endblock %}
 {% block content %}
 <div class="list">
     <div class="mark">购物清单</div>
@@ -16,8 +13,8 @@
                 <th width="15%">名称</th>
                 <th width="15%">单价(元)</th>
                 <th width="10%">单位</th>
-                <th width="25%">数量</th>
-                <th width="25%">小计</th>
+                <th width="10%">数量</th>
+                <th width="40%">小计</th>
             </tr>
             <tr>
                 {% for purchase in purchase %}
@@ -25,16 +22,21 @@
                     <td>{{ purchase.name }}</td>
                     <td>{{ purchase.price }}</td>
                     <td>{{ purchase.unit }}</td>
-                    <td><div class="package"><button class="reduce" id="{{ purchase.goods_id }}" >-</button>
-                        <span id="gf">{{ purchase.count }}</span>
-                        <button class="plus" id="{{ purchase.goods_id }}">+</button>
-                    </div>
-                    </td>
+                    <td>{{ purchase.count }}</td>
                     <td id="subtotals{{ purchase.goods_id }}">{{ purchase.free_counts }}元(原价:{{ purchase.subtotal }}元)</td>
             </tr>
-                {% endfor %}
+            {% endfor %}
         </table>
-        <p>总计:{{ totals }}元</p>
-<div class="paymentButton" onclick="payment()">付款</div>
+        <div class="mark2">赠送商品</div>
+<table>
+    <tr>
+        <th width="25%">分类</th>
+        <th width="50%">名称</th>
+        <th width="25%">数量</th>
+    </tr>
+     <tr>
+
+     </tr>
+</table>
 </div>
-    {% endblock content %}
+{% endblock content %}
