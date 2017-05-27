@@ -30,11 +30,17 @@
                         <button class="plus" id="{{ purchase.goods_id }}">+</button>
                     </div>
                     </td>
-                    <td id="subtotals{{ purchase.goods_id }}">{{ purchase.free_counts }}元(原价:{{ purchase.subtotal }}元)</td>
+                    <td id="subtotals{{ purchase.goods_id }}">
+                        {% if purchase.free_counts != 0%}
+                        {{ purchase.free_counts }}元 原价:
+                        {% endif %}
+                        {{ purchase.subtotal }}元</td>
             </tr>
                 {% endfor %}
         </table>
-        <p>总计:{{ totals }}元</p>
-<div class="paymentButton" onclick="payment()">付款</div>
+        <div class="word">
+            <p>总计:{{ totals }}元</p>
+            <div class="paymentButton" onclick="payment()">付款</div>
+        </div>
 </div>
     {% endblock content %}

@@ -8,5 +8,5 @@ function cart() {
     location.href = '/shop_cart';
 }
 function payment() {
-    location.href = '/payment'
+    location.href = '/payment';
 }

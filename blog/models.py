@@ -21,6 +21,8 @@ class Purchase(models.Model):
     subtotal = models.FloatField(default=0)
     free_counts = models.IntegerField(default=0)
     free = models.IntegerField(default=0)
+    free_count = models.IntegerField(default=0)
+    free_moeny = models.FloatField(default=0)
 
     def total():
         total_count = 0
@@ -35,6 +37,13 @@ class Purchase(models.Model):
         for items in self:
             totals += items.subtotal
         return totals
+
+    def shop_moeny():
+        moeny = 0
+        self = Purchase.objects.all()
+        for items in self:
+            moeny += items.free_moeny
+        return moeny
 
 class Free(models.Model):
     goods_id = models.IntegerField(default=0, null=False)

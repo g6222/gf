@@ -1,7 +1,8 @@
 .list{
     background-color: white;
     margin: 30px 150px;
-    height: 550px;
+    min-height: 580px;
+    height: auto;
     border-style: solid;
     border-color: #bebdc1;
     border-width: 1px;
@@ -70,21 +71,20 @@ span{
 }
 .paymentButton{
     background-color: #5e6ac0;
-    width: 70px;
+    width: 60px;
     font-size:18px;
     border-radius:5px;
     color: white;
     font-weight: bold;
     cursor: pointer;
     text-align: center;
-    float: right;
     height: 33px;
-    margin-top: 75px;
+    margin-right: 15px;
 }
 p{
     font-size: 15px;
+    margin: 0 15px 9px 0;
+}
+.word{
     float: right;
-    position: relative;
-    right: 80px;
-    margin-top: 30px;
 }

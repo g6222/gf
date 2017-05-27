@@ -1,6 +1,7 @@
 .list{
     background-color: white;
     margin: 30px 150px;
+    min-height: 650px;
     height: auto;
     border-style: solid;
     border-color: #bebdc1;
@@ -40,4 +41,23 @@ td
     font-size: 20px;
     border:1px solid rgba(128, 109, 109, 0.2);
     padding-left: 50px;
+}
+.determine{
+    background-color: #5e6ac0;
+    width: 60px;
+    font-size:18px;
+    border-radius:5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    height: 33px;
+    margin-right: 15px;
+}
+.word{
+    float: right;
+}
+p{
+    font-size: 15px;
+    margin: 0 30px 9px 0;
 }

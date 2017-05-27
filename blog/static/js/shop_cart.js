@@ -17,10 +17,18 @@ $(document).ready(function(){
                 if(counts_count.number == 0){
                     $('#'+id).parents('tr').remove()
                 }
+                if(counts_count.total_count==0){
+                    location.href = '/shopping_list';
+                }
+                if(counts_count.free == 0){
+                    $('#subtotals'+id).text(counts_count.total.toFixed(1)+'元')
+                }
+                else {
+                    $('#subtotals'+id).text(counts_count.free+'元'+'(原价:'+counts_count.total.toFixed(1)+'元)')
+                }
                 $('#'+id).next().text(counts_count.number);
-                $("number").text(counts_count.total_count)
-                $('#subtotals'+id).text(counts_count.free+'元'+'(原价:'+counts_count.total.toFixed(1)+'元)')
-                $('p').text('总计:'+counts_count.totals.toFixed(2)+'元')
+                $("number").text(counts_count.total_count);
+                $('p').text('总计:'+counts_count.totals.toFixed(2)+'元');
             }
         })
     })

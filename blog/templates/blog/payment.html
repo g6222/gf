@@ -3,10 +3,14 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/payment.css' %}">
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/clock.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/payment.js' %}"></script>
 {% endblock %}
 {% block content %}
 <div class="list">
     <div class="mark">购物清单</div>
+    <div id='clock'></div>
+<div>{{ local }}</div>
         <table>
             <tr>
                 <th width="10%">分类</th>
@@ -23,7 +27,11 @@
                     <td>{{ purchase.price }}</td>
                     <td>{{ purchase.unit }}</td>
                     <td>{{ purchase.count }}</td>
-                    <td id="subtotals{{ purchase.goods_id }}">{{ purchase.free_counts }}元(原价:{{ purchase.subtotal }}元)</td>
+                    <td>{% if purchase.free_counts != 0%}
+                        {{ purchase.free_counts }}元
+                        {% endif %}
+                        (原价:{{ purchase.subtotal }}元)
+                    </td>
             </tr>
             {% endfor %}
         </table>
@@ -35,8 +43,19 @@
         <th width="25%">数量</th>
     </tr>
      <tr>
-
+         {% for purchase in purchase %}
+         {% if purchase.free_count != 0%}
+         <td>{{ purchase.type }}</td>
+         <td>{{ purchase.name }}</td>
+         <td>{{ purchase.free_count }}</td>
+         {% endif %}
      </tr>
+{% endfor %}
 </table>
+        <div class="word">
+            <p>总计:{{ totals }}</p>
+            <p>节省:{{ moeny }}</p>
+            <div class="determine" onclick="shoppingList()">确认</div>
+        </div>
 </div>
 {% endblock content %}
