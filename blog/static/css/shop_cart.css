@@ -1,7 +1,6 @@
 .list{
     background-color: white;
     margin: 30px 150px;
-    min-height: 580px;
     height: auto;
     border-style: solid;
     border-color: #bebdc1;
@@ -87,4 +86,7 @@ p{
 }
 .word{
     float: right;
+}
+.blank{
+    height: 80px;
 }

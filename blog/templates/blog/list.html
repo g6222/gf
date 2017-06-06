@@ -6,7 +6,6 @@
     {% block css %}
     {% endblock %}
     <script type="text/javascript" src="{% static 'js/home.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/shop_cart.js' %}"></script>
 </head>
 <body>
 <div class="frame">
@@ -14,7 +13,7 @@
     <div class="navigationbar {%  block home_nav  %}{% endblock %}" onclick="home()">主页</div>
     <div class="navigationbar {%  block shopping_list  %}{% endblock %}" onclick="shoppingList()">商品列表</div>
     <div class="navigationbar cartPosition {%  block cart  %}{% endblock %}" onclick="cart()">
-        <img class="icon" src="{% static '购物车.png' %}">购物车(<number>{{total_count}}</number>)</div>
+        <img class="icon" src="{% static '购物车.png' %}">购物车(<number>{{ total_count }}</number>)</div>
 </div>
 {% block content %}
 {% endblock %}

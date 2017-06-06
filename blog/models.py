@@ -19,7 +19,7 @@ class Purchase(models.Model):
     goods_id = models.IntegerField(default=0,null=False)
     count = models.IntegerField(default=0)
     subtotal = models.FloatField(default=0)
-    free_counts = models.IntegerField(default=0)
+    free_counts = models.FloatField(default=0)
     free = models.IntegerField(default=0)
     free_count = models.IntegerField(default=0)
     free_moeny = models.FloatField(default=0)

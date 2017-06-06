@@ -1,7 +1,6 @@
 .list{
     background-color: white;
     margin: 30px 150px;
-    min-height: 650px;
     height: auto;
     border-style: solid;
     border-color: #bebdc1;
@@ -34,7 +33,7 @@ td
   {
     height:35px;
   }
-.mark2{
+.freeList{
     background-color: rgba(128, 109, 109, 0.2);
     height: 60px;
     line-height: 60px;
@@ -60,4 +59,8 @@ td
 p{
     font-size: 15px;
     margin: 0 30px 9px 0;
+}
+.blank{
+    width: 60px;
+    height: 100px;
 }

@@ -25,22 +25,24 @@
                     <td>{{ purchase.name }}</td>
                     <td>{{ purchase.price }}</td>
                     <td>{{ purchase.unit }}</td>
-                    <td><div class="package"><button class="reduce" id="{{ purchase.goods_id }}" >-</button>
-                        <span id="gf">{{ purchase.count }}</span>
-                        <button class="plus" id="{{ purchase.goods_id }}">+</button>
+                    <td><div class="package">
+                        <button class="reduce"data-id="{{ purchase.goods_id }}" data-count="-1" >-</button>
+                        <span id="digit">{{ purchase.count }}</span>
+                        <button class="plus" data-id="{{ purchase.goods_id }}" data-count=1>+</button>
                     </div>
                     </td>
                     <td id="subtotals{{ purchase.goods_id }}">
-                        {% if purchase.free_counts != 0%}
+                        {% if purchase.free_moeny > 0 %}
                         {{ purchase.free_counts }}元 原价:
                         {% endif %}
                         {{ purchase.subtotal }}元</td>
             </tr>
                 {% endfor %}
         </table>
-        <div class="word">
+            <div class="word">
             <p>总计:{{ totals }}元</p>
             <div class="paymentButton" onclick="payment()">付款</div>
-        </div>
+            </div>
+<div class="blank"></div>
 </div>
     {% endblock content %}
